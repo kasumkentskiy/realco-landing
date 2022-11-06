@@ -467,11 +467,17 @@ body {
   padding: 128px 0 160px;
   position: relative;
 
-  &::before {
+
+  &::before,
+  &::after {
     position: absolute;
     content: '';
     width: 135px;
     height: 135px;
+  }
+
+  &::before {
+
     background-image: url(../images/triangle-2.svg);
     background-repeat: no-repeat;
     top: 0;
@@ -480,10 +486,7 @@ body {
 
 
   &::after {
-    position: absolute;
-    content: '';
-    width: 135px;
-    height: 135px;
+
     background-image: url(../images/triangle-3.svg);
     background-repeat: no-repeat;
     bottom: 0;
@@ -501,7 +504,9 @@ body {
 
   /* .properties__title */
 
-  &__title {}
+  &__title {
+    margin: 21px 0 81px;
+  }
 
   /* .properties__content */
 
@@ -509,31 +514,169 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    margin-bottom: 90px;
   }
 
   /* .properties__content-item */
 
   &__content-item {
+    background-color: #fff;
     max-width: 405px;
     text-align: left;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 3px 8px 0px rgba(223, 223, 223, 0.2);
 
-    &__img {}
+    &-box {
+      padding: 24px;
+    }
 
-    &__title {}
 
-    &__price {}
+    &__img {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    &__price {
+      font-size: 18px;
+      line-height: 27px;
+      margin: 3px 0 16px;
+    }
+
+    &__address {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+
+
+      color: #65665C;
+      position: relative;
+      padding-left: 23px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-image: url('../images/location-icon.svg');
+        left: 2px;
+        top: 4px;
+      }
+    }
   }
 }
 
 
 .room-num {
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+
+  color: #65665C;
 
   /* .room-num__item */
 
-  &__item {}
+  &__item {
+
+
+    padding-left: 23px;
+    margin-right: 24px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      background-repeat: no-repeat;
+
+    }
+
+    &:nth-child(1) {
+
+      &::before {
+        background-image: url('../images/bathtub-icon.svg');
+        left: 0;
+        top: 2px;
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      &::before {
+        background-image: url('../images/bed-icon.svg');
+        left: 0;
+        top: 5px;
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      &::before {
+        background-image: url('../images/square-icon.svg');
+        left: 3px;
+        top: 2px;
+      }
+
+    }
+  }
 }
 
-.properties-btns {}
+
+// locations section
+
+.locations {
+  background: $bg;
+padding-bottom: 120px;
+  &__subtitle {
+    max-width: 713px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  /* .locations__items */
+
+  &__items {
+    padding: 80px 0 90px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+  }
+}
+
+.locations-item {
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 33px;
+  flex-basis: 416px;
+  background: #fff;
+  /* .locations-item__title */
+
+  &__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+
+
+}
+.locations-btns {
+  text-align: center;
+}
 
 
 
