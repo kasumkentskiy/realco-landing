@@ -636,7 +636,10 @@ body {
 
 .locations {
   background: $bg;
-padding-bottom: 120px;
+  padding-bottom: 353px;
+  position: relative;
+  z-index: -1;
+
   &__subtitle {
     max-width: 713px;
     margin: 0 auto;
@@ -674,9 +677,76 @@ padding-bottom: 120px;
 
 
 }
+
 .locations-btns {
   text-align: center;
 }
+
+
+
+
+
+// slogan
+
+.slogan {
+  margin-top: -232px;
+
+  /* .slogan__inner */
+
+  &__inner {
+    padding-top: 127px;
+    padding-bottom: 95px;
+    background: #65665C;
+    border-radius: 24px;
+    text-align: center;
+    background-image: url('../images/family-icon.svg');
+    background-repeat: no-repeat;
+
+    background-position: center 75px;
+
+  }
+
+  /* .slogan__title */
+
+  &__title {
+    color: #fff;
+
+  }
+
+  /* .slogan__text */
+
+  &__text {
+    max-width: 765px;
+
+    font-size: 18px;
+    line-height: 27px;
+    color: #E7E8E3;
+    margin: 0 auto;
+    padding: 29px 0 21px;
+  }
+
+  /* .slogan__link */
+
+  &__link {
+    padding: 13px 25px;
+    background: #CF6F49;
+    border: 1px solid #CF6F49;
+    border-radius: 6px;
+    display: inline-block;
+    color: #FFFFFF;
+
+  }
+}
+
+
+
+
+// reviews section
+
+
+
+
+
 
 
 
