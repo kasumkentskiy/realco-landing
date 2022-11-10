@@ -1,5 +1,7 @@
 
 $(function () {
+
+
   ScrollReveal().reveal('.header', {
     reset: true,
     // scale: 0.5,
@@ -43,8 +45,12 @@ $(function () {
     origin: 'right',
   });
 
+  $(".reviews__content-stars").rateYo({
+    
+    starWidth: "20px",
+    ratedFill: "#CF6F49",
+    readOnly: true,
+  });
+
 });
-$(".star").rateYo({
-  rating: 3.6,
-  starWidth: "20px",
-});
+
