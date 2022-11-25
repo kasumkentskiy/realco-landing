@@ -1,6 +1,10 @@
 
 $(function () {
-
+  $('.nav__menu-burger').on('click', function () {
+    $('.nav__menu').toggleClass('nav__menu--active');
+    $('.nav__menu-burger').toggleClass('nav__menu-burger--close');
+    $('.logo').toggleClass('logo--active');
+  });
 
   ScrollReveal().reveal('.header', {
     reset: true,

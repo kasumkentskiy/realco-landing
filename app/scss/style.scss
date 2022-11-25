@@ -41,6 +41,14 @@ body {
     }
   }
 
+  @media (max-width:900px) {
+    &__notifi-text {
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
   .nav {
 
 
@@ -56,6 +64,7 @@ body {
 
       font-size: 16px;
       line-height: 24px;
+      transition: all .3s ease-in;
     }
 
     &__menu-item {
@@ -136,6 +145,8 @@ body {
       position: relative;
       display: none;
 
+
+
       span {
 
         display: block;
@@ -148,6 +159,7 @@ body {
         &::after {
           content: '';
           position: absolute;
+          transition: all .3s linear;
           bottom: 0;
 
           width: 25px;
@@ -169,14 +181,77 @@ body {
     }
 
     @media (max-width: 900px) {
+      &__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+      }
+
+      &__button-link--home {
+        background-color: #fff;
+        margin: 20px 0;
+       color: $main-color;
+      }
+
+      &__menu-item:nth-child(2) {
+        margin-right: 0;
+      }
+      &__menu-item {
+        margin-right: 0;
+
+        margin-bottom: 20px;
+     
+        
+      }
       &__menu {
-        display: none;
+
+        transition: all .3s linear;
+        transform: translateX(-200%);
+        flex-direction: column;
+        z-index: 99;
+        padding-top: 20px;
+        background: #E2D2D2;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 600px;
+        font-size: 20px;
       }
 
       &__menu-burger {
         display: block;
+
+      }
+
+    }
+
+    &__menu--active {
+      transform: translateX(0);
+    }
+
+    &__menu-burger--close {
+
+
+      span {
+
+
+        &::before {}
+
+        &::after {
+          width: 100%;
+
+
+        }
       }
     }
+  }
+
+  .logo--active {
+    position: relative;
+    z-index: 99;
+  
   }
 
   .header {
